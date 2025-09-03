@@ -2,8 +2,8 @@
 //Json
 package com.example.projectcurrencyconverterapi;
 
-import java.util.HashMap; // Importa a cl
-import java.util.Map;
+import java.util.HashMap; // Importa a classe Map da biblioteca Java, usada para armazenar pares da chave-valor
+import java.util.Map;  // Importa a classe Map da biblioteca Java, usada para armazenar pares chave-valor
 
 public class ExchangeRatesResponse {
     // declara um mapa que armazena taxas de conversão em moedas. (ex. USD, EUR, GBP)
