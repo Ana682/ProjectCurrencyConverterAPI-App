@@ -7,6 +7,7 @@
 * [Benefícios](#benefícios)
 * [Tecnologias](#tecnologias)
 * [Estruturas do Projeto](#estrutura)
+* [Comandos Iniciais] (#comandos-iniciais)
 * [Autores](#autores)
 * [Conclusão](#conclusão)
 
@@ -63,6 +64,32 @@ Além disso, para executar corretamente as classes e manter o controle de versã
 
 - git push – Envia os commits locais para o repositório remoto.
 
+Ainda assim, vale destacar que na parte do (activity_main.xml) foram criados os seguintes comandos:
+- EditText = com o objetivo de inserir o valor;
+- Spinner = com o objetivo de escolher a moeda de origem;
+- Spinner2 = com o objetivo de escolher a moeda de destino;
+- Buttom = com o objetivo de realizar a conversão escolhida.
+
+Por fim, uma das partes mais importantes utilizadas no (MainActivity.Java):
+- import android.os.Bundle;: O pacote Bundle é usado para empacotar e transferir dados entre diferentes partes de um aplicativo Android, como entre Activities;
+- import android.view.View;: A classe View é a classe base para todos os elementos de interface (widgets) na interface do utilizador do Android, como botões, textos, etc;
+- import android.widget.Button;: Traz a funcionalidade de criar um botão na interface do utilizador;
+- import android.widget.ArrayAdapter;: É um adaptador que pode preencher um ListView ou Spinner com dados de uma lista de objetos;
+- import android.widget.EditText;: Permite criar uma área onde o usuário pode inserir texto;
+- import android.widget.Spinner;: Traz a funcionalidade de criar um menu de seleção (dropdown) onde o usuário pode escolher um item;
+- import android.widget.TextView;: É usado para exibir texto estático na interface;
+- import android.widget.Toast;: Cria mensagens pequenas e temporárias que aparecem na tela para dar feedback ao usuário;
+- import androidx.appcompat.app.AppCompatActivity;: Traz a classe base para as suas Activitys, garantindo compatibilidade com versões mais antigas do Android e oferecendo funcionalidades modernas.
+
+# Comandos - Iniciais
+Nesta parte, há a presença das anotações escritas durante as primeiras aulas. Anotações, as quais são o estopim para começar tudo.
+- git init = usado para criar um repositório vazio;
+- git remote add origin url = atrelar ou ligar um repositório local a um repositório remoto;  
+- git status = usado para verificar o estado do repositório no momento.
+- git add = server para traquear (colocar sob cuidado do git os arquivos, os arquivos que não foram tratados no git). 
+- git commit = usado para adicionar uma mensagem que descreve a alteração feita no repositório. O parâmetro -m significa mensagem em inglês que me permite colocar na linha de comando o texto da alteração feita.
+- git push = serve para enviar os arquivos para o repositório remoto.
+- git pull = serve para baixar arquivos do remoto para local. 
 
 # Autores
 O projeto contou com a orientação do Professor Leonardo Rocha, que auxiliou os alunos da turma do 3º ano do Ensino Médio durante o desenvolvimento.
