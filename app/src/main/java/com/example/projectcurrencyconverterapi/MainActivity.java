@@ -66,6 +66,24 @@ public class MainActivity extends AppCompatActivity {
     }
     // Método para converter o valor de uma moeda para outra
     private void converterMoeda(){
+        ExchangeRateService service = RetrofitClient.getInstance(); // Obtém a instância do serviço
+        Call<ExchangeRatesResponse> call = service.getExchangeRates("930cc668dd7a6907f0948a27", "USD"); //Faz a chamada da API
+
+        // Execute a chamada de forma assíncrona
+        call.enqueue(new Callback<ExchangeRatesResponse>() {
+            @Override
+            public void onResponse(Call<ExchangeRatesResponse> call, Response<ExchangeRatesResponse> response) {
+              if(response.isSuccessful() && response.body() !=null){
+                  taxasDecambio = response.body().getConversionRates(); //Armazena as taxas de câmbio
+              }else{ // Exibi mensagem de erro
+                  tvResultado.setText("Erro ao carregar taxas de câmbio");
+              }
+            }
+            @Override
+            public void onFailure(Call<ExchangeRatesResponse> call, Throwable t) {
+
+            }
+        });
 
     }
 }
