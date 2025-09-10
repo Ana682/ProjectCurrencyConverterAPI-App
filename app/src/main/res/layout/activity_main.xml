@@ -5,6 +5,7 @@
     android:orientation="vertical"
     android:padding="16dp">
 
+    <!-- Componente para inserir o titulo na tela do App-->
     <TextView
         android:id="@+id/Titulo"
         android:text="Conversor de Moedas"
@@ -46,6 +47,7 @@
         android:layout_marginTop="16dp"
         android:text="Converter" />
 
+    <!-- Componente que receberá a conversão e exibirá ao usúario-->
     <TextView
         android:id="@+id/tvResultado"
         android:layout_width="match_parent"
