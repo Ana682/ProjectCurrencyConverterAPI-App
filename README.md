@@ -70,7 +70,7 @@ Ainda assim, vale destacar que na parte do (activity_main.xml) foram criados os 
 - Spinner2 = com o objetivo de escolher a moeda de destino;
 - Buttom = com o objetivo de realizar a conversão escolhida.
 
-Por fim, uma das partes mais importantes utilizadas no (MainActivity.Java):
+E uma das partes mais importantes utilizadas no (MainActivity.Java):
 - import android.os.Bundle;: O pacote Bundle é usado para empacotar e transferir dados entre diferentes partes de um aplicativo Android, como entre Activities;
 - import android.view.View;: A classe View é a classe base para todos os elementos de interface (widgets) na interface do utilizador do Android, como botões, textos, etc;
 - import android.widget.Button;: Traz a funcionalidade de criar um botão na interface do utilizador;
@@ -80,7 +80,29 @@ Por fim, uma das partes mais importantes utilizadas no (MainActivity.Java):
 - import android.widget.TextView;: É usado para exibir texto estático na interface;
 - import android.widget.Toast;: Cria mensagens pequenas e temporárias que aparecem na tela para dar feedback ao usuário;
 - import androidx.appcompat.app.AppCompatActivity;: Traz a classe base para as suas Activitys, garantindo compatibilidade com versões mais antigas do Android e oferecendo funcionalidades modernas;
--  ArrayAdapter: converte os dados da fonte em objetos visuais que a UI pode exibir. Ou seja, permite organizar múltiplas cópias de um objeto ou grupo de objetos segundo um padrão retangular.
+-  ArrayAdapter: converte os dados da fonte em objetos visuais que a UI pode exibir. Ou seja, permite organizar múltiplas cópias de um objeto ou grupo de objetos segundo um padrão retangular;
+
+Nest contexto, temos algumas partes que são extremamentes necessárias, dividndo as em quatro partes:
+
+1) Local que irá Inicializar os componentes da interface:
+- spinnerMoedaOrigem = findViewById(R.id.spinnerMoedaOrigem);
+- spinnerMoedaDestino = findViewById(R.id.spinnerMoedaDestino);
+- etValor = findViewById(R.id.etValor);
+- btnConverter = findViewById(R.id.btnConverter);
+- tvResultado = findViewById(R.id.tvResultado);
+
+2) Local da configuração dos  Spinners com a lista de moedas:
+- ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, moedas);
+- adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+- spinnerMoedaOrigem.setAdapter(adapter);
+- spinnerMoedaDestino.setAdapter(adapter);
+
+3) Local que carrega as taxas de câmbio da API:
+- carregarTaxasDeCambio();
+- btnConverter.setOnClickListener( view-> converterMoeda());
+
+4) Método para converter o valor de uma moeda para outra
+- private void converterMoeda(){
 
 # Comandos - Iniciais
 Nesta parte, há a presença das anotações escritas durante as primeiras aulas. Anotações, as quais são o estopim para começar tudo.
