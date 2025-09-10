@@ -79,7 +79,8 @@ Por fim, uma das partes mais importantes utilizadas no (MainActivity.Java):
 - import android.widget.Spinner;: Traz a funcionalidade de criar um menu de seleção (dropdown) onde o usuário pode escolher um item;
 - import android.widget.TextView;: É usado para exibir texto estático na interface;
 - import android.widget.Toast;: Cria mensagens pequenas e temporárias que aparecem na tela para dar feedback ao usuário;
-- import androidx.appcompat.app.AppCompatActivity;: Traz a classe base para as suas Activitys, garantindo compatibilidade com versões mais antigas do Android e oferecendo funcionalidades modernas.
+- import androidx.appcompat.app.AppCompatActivity;: Traz a classe base para as suas Activitys, garantindo compatibilidade com versões mais antigas do Android e oferecendo funcionalidades modernas;
+-  ArrayAdapter: converte os dados da fonte em objetos visuais que a UI pode exibir. Ou seja, permite organizar múltiplas cópias de um objeto ou grupo de objetos segundo um padrão retangular.
 
 # Comandos - Iniciais
 Nesta parte, há a presença das anotações escritas durante as primeiras aulas. Anotações, as quais são o estopim para começar tudo.
